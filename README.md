@@ -1,7 +1,7 @@
 # Workshop alamofire ios
 Lien Tuto : https://drive.google.com/file/d/1G9bMubf-s09IKjS1gzqIrqNespsDmWKV/view
 
-C'est un workshop iOS qui montre l'utilisation de Alamofire pour la consommation des web services.
+C'est un workshop iOS qui explique l'utilisation de Alamofire pour la consommation des web services.
 
 ## Prérequis
 
