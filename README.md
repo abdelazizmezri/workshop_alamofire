@@ -96,7 +96,6 @@ Pour autoriser l'accès HTTP, il faut ajouter ce code à `info.plist`:
 ```sh
     <key>NSAppTransportSecurity</key>
     <dict>
-      <!--Include to allow all connections (DANGER)-->
       <key>NSAllowsArbitraryLoads</key>
           <true/>
     </dict>
