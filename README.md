@@ -3,18 +3,13 @@ Lien Tuto : https://drive.google.com/file/d/1G9bMubf-s09IKjS1gzqIrqNespsDmWKV/vi
 
 C'est un workshop iOS qui montre l'utilisation de Alamofire pour la consommation des web services.
 
-
-
 ## Prérequis
 
 - Xcode
 - node.js
 - MAMP
 - Homebrew
-
 - cocoapods
-
-
 
 ## Installation
 
@@ -31,10 +26,10 @@ ou
 
 1) Installer [Node.js](https://nodejs.org/) v10+ to run.
 
-2) Aller sous le dossier "workshop_alamofire/Server"
+2) Aller sous le dossier `workshop_alamofire/Server`
 
 3) Lancez MAMP et créer la base de données "workshop_ios" qui contient la table "movie" de deux columns : 
-_id_ : Int | _name_ : String
+`id` : Int | `name` : String
 
 4) lancer la commande :
 ```sh
@@ -61,7 +56,7 @@ node index.js
  brew install cocoapods
 ```
 
-4) Aller sous le dossier "workshop_alamofire/workshopTableView"
+4) Aller sous le dossier `workshop_alamofire/workshopTableView`
 
 3) Créer le Podfile
 
@@ -70,6 +65,7 @@ pod init
 ```
 
 4) Vider le fichier et coller ce code :
+
 ```sh
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
@@ -85,9 +81,23 @@ target 'workshopTableView' do
 end
 
 ```
+
 5) lancer la commande :
 ```sh
 pod install
 ```
 
-6) Ouvrir le fichier 'workshopTableView.xcworkspace' qui à l'icone blanche et non pas 'workshopTableView.xcodeproj' qui a l'icone bleue
+6) Ouvrir le fichier `workshopTableView.xcworkspace` qui à l'icone blanche et non pas `workshopTableView.xcodeproj` qui a l'icone bleue
+
+
+## Notes
+Pour autoriser l'accès HTTP, il faut ajouter ce code à `info.plist`:
+
+```sh
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <!--Include to allow all connections (DANGER)-->
+      <key>NSAllowsArbitraryLoads</key>
+          <true/>
+    </dict>
+```
